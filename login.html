@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Estilo Moderno</title>
+  <link rel="stylesheet" href="css/loginStyle.css">
+</head>
+<body>
+  <div class="container">
+    <!-- CONTENEDOR DEL FORMULARIO -->
+    <div class="form-container">
+      <h2>Iniciar Sesión</h2>
+      <form id="formLogin">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <input type="email" id="correo" placeholder="Correo electrónico" required />
+        <input type="password" id="clave" placeholder="Contraseña" required />
+        
+        <button type="submit">Ingresar</button>
+
+  
+        <button type="button" id="btnRegistrar" style="display: none;">Registrar</button>
+
+    
+        <div id="mensaje" style="text-align:center; margin-top:10px;"></div>
+
+        <div class="volver-link">
+          <a href="index.html">Volver</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- CONTENEDOR DE BIENVENIDA A LA DERECHA -->
+    <div class="overlay-container">
+      <h2>Hola!!!</h2>
+      <p>Crear tu cuenta</p>
+      <button onclick="document.getElementById('btnRegistrar').click()">Registrar</button>
+    </div>
+  </div>
+
+  <script src="javascript/log.js"></script>
+  
+</body>
+</html>
