@@ -142,15 +142,19 @@ h1 {
   font-weight: bold;
 }
 
-#cerrarSesion {
-  background-color: #b91c1c;
-  color: white;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.usuario-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 20px;
 }
 
-#cerrarSesion:hover {
-  background-color: #7f1d1d;
+#cerrarSesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }

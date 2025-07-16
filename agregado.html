@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="css/agregado.css" />
-</head>
-<body>
-  <h2>Tu carrito de compras</h2>
-  <div class="carrito" id="carrito"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/agregado.css" />
+     <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
 
-  <div class="volver">
-    <a href="index.html" class="btn-volver">← Volver a productos</a>
-  </div>
+  <header class="header">
+      <h1 class="logo">SPECIAL</h1>
 
-  <script src="javascript/agregado.js"></script>
-</body>
-</html>
+      <div class="usuario-container">
+        <span id="nombreUsuario"></span>
+      </div>
+
+      <div class="usuario-container">
+        <span id="nombreUsuario"></span>
+        <button id="cerrarSesion" style="display: none;">Cerrar sesión</button>
+      </div>
+
+      <div class="header-right">
+       <a href="login.html" class="login-btn" id="btnLoginHeader">Login</a>
+        <a href="agregado.html" class="cart-icon">
+     
+        </a>
+      </div>
+
+    </header>
+
+    <body>
+      <h2>Tu carrito de compras</h2>
+      <div class="carrito" id="carrito"></div>
+
+      <div class="volver">
+        <a href="index.html" class="btn-volver">← Volver a productos</a>
+      </div>
+
+      <script src="javascript/agregado.js"></script>
+      <script src="javascript/session.js"></script>
+
+    </body>
+  </html>

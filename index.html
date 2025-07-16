@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carrito - Productos</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="header">
-  <h1 class="logo">SPECIAL</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - Productos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">SPECIAL</h1>
 
-  <div class="header-right">
-    <a href="login.html" class="login-btn">Login</a>
-    <a href="agregado.html" class="cart-icon">
-      🛒<span id="contador-carrito">0</span>
-    </a>
-  </div>
-  <div class="user-info">
-  <span id="nombreUsuario"></span>
-  <button id="cerrarSesion">Cerrar sesión</button>
-</div>
+      <div class="usuario-container">
+        <span id="nombreUsuario"></span>
+      </div>
 
-</header>
+      <div class="usuario-container">
+        <span id="nombreUsuario"></span>
+        <button id="cerrarSesion" style="display: none;">Cerrar sesión</button>
+      </div>
 
+      <div class="header-right">
+       <a href="login.html" class="login-btn" id="btnLoginHeader">Login</a>
+        <a href="agregado.html" class="cart-icon">
+          🛒<span id="contador-carrito">0</span>
+        </a>
+      </div>
 
-  <main class="contenedor-productos" id="contenedor-productos">
-    <div class="producto">
-      <img src="imagenes/habitacion.jpg" alt="Base Roja" />
-      <p>Base Roja</p>
-      <p class="precio">$730.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion2.jpg" alt="Base Gris" />
-      <p>Base Gris</p>
-      <p class="precio">$540.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion3.jpg" alt="Base Dorada" />
-      <p>Base Dorada</p>
-      <p class="precio">$620.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion.jpg" alt="Base Negra" />
-      <p>Base Negra</p>
-      <p class="precio">$580.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion2.jpg" alt="Base Blanca" />
-      <p>Base Blanca</p>
-      <p class="precio">$600.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion3.jpg" alt="Base Madera" />
-      <p>Base Madera</p>
-      <p class="precio">$750.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion.jpg" alt="Base Tapizada" />
-      <p>Base Tapizada</p>
-      <p class="precio">$680.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion2.jpg" alt="Base Clásica" />
-      <p>Base Clásica</p>
-      <p class="precio">$720.000</p>
-      <button>Comprar</button>
-    </div>
-    <div class="producto">
-      <img src="imagenes/habitacion3.jpg" alt="Base Premium" />
-      <p>Base Premium</p>
-      <p class="precio">$820.000</p>
-      <button>Comprar</button>
-    </div>
-  </main>
+    </header>
 
-  <script src="javascript/productos.js"></script>
-  <script src="javascript/session.js"></script>
-</body>
+    <main class="contenedor-productos" id="contenedor-productos">
+      <div class="producto">
+        <img src="imagenes/habitacion.jpg" alt="Base Roja" />
+        <p>Base Roja</p>
+        <p class="precio">$730.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion2.jpg" alt="Base Gris" />
+        <p>Base Gris</p>
+        <p class="precio">$540.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion3.jpg" alt="Base Dorada" />
+        <p>Base Dorada</p>
+        <p class="precio">$620.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion.jpg" alt="Base Negra" />
+        <p>Base Negra</p>
+        <p class="precio">$580.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion2.jpg" alt="Base Blanca" />
+        <p>Base Blanca</p>
+        <p class="precio">$600.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion3.jpg" alt="Base Madera" />
+        <p>Base Madera</p>
+        <p class="precio">$750.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion.jpg" alt="Base Tapizada" />
+        <p>Base Tapizada</p>
+        <p class="precio">$680.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion2.jpg" alt="Base Clásica" />
+        <p>Base Clásica</p>
+        <p class="precio">$720.000</p>
+        <button>Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="imagenes/habitacion3.jpg" alt="Base Premium" />
+        <p>Base Premium</p>
+        <p class="precio">$820.000</p>
+        <button>Comprar</button>
+      </div>
+    </main>
+
+    <script src="javascript/productos.js"></script>
+    <script src="javascript/session.js"></script>
+  </body>
 </html>
