@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="css/agregado.css" />
-     <link rel="stylesheet" href="css/style.css" />
-    
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <header class="header">
+  <body>
+    <header class="header">
       <h1 class="logo">SPECIAL</h1>
-
-      <div class="usuario-container">
-        <span id="nombreUsuario"></span>
-      </div>
 
       <div class="usuario-container">
         <span id="nombreUsuario"></span>
@@ -22,24 +18,44 @@
       </div>
 
       <div class="header-right">
-       <a href="login.html" class="login-btn" id="btnLoginHeader">Login</a>
+        <a href="login.html" class="login-btn" id="btnLoginHeader">Login</a>
         <a href="agregado.html" class="cart-icon">
-     
+          🛒<span id="contadorCarrito">0</span>
         </a>
       </div>
-
     </header>
 
-    <body>
-      <h2>Tu carrito de compras</h2>
-      <div class="carrito" id="carrito"></div>
+    <h2>Tu carrito de compras</h2>
+    <div class="carrito" id="carrito"></div>
 
-      <div class="volver">
-        <a href="index.html" class="btn-volver">← Volver a productos</a>
-      </div>
+    <!-- BOTÓN FINALIZAR COMPRA -->
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="btnFinalizarCompra" class="btn-finalizar">
+        🛍 Finalizar Compra
+      </button>
+    </div>
 
-      <script src="javascript/agregado.js"></script>
-      <script src="javascript/session.js"></script>
+    <div class="volver">
+      <a href="index.html" class="btn-volver">← Volver a productos</a>
+    </div>
 
-    </body>
-  </html>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Tu JS -->
+    <script src="javascript/agregado.js"></script>
+    <script src="javascript/session.js"></script>
+    <script type="module" src="javascript/agregado.js"></script>
+
+
+    <!-- Contador del carrito -->
+    <script type="module">
+      import { actualizarContadorCarrito } from './javascript/utils.js';
+      actualizarContadorCarrito();
+    </script>
+    <script type="module" src="javascript/productos.js"></script>
+
+
+</script>
+  </body>
+</html>

@@ -12,14 +12,14 @@ formulario.addEventListener("submit", (e) => {
   const clave = document.getElementById("clave").value.trim();
 
   const usuario = usuariosRegistrados.find(
-    (u) => u.correo === correo && u.clave === clave
+    (u) => u.nombre === nombre && u.correo === correo && u.clave === clave
   );
 
   if (usuario) {
     sessionStorage.setItem("usuario", JSON.stringify(usuario));
     window.location.href = "index.html";
   } else {
-    mostrarMensaje("Usuario no encontrado. Regístrate primero.", true);
+    mostrarMensaje("Nombre, correo o contraseña incorrectos.", true);
   }
 });
 

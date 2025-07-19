@@ -1,15 +1,28 @@
+// productos.js
+import { actualizarContadorCarrito } from "./utils.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const botonesComprar = document.querySelectorAll(".producto button");
-  const contador = document.getElementById("contador-carrito");
-
-  function actualizarContador() {
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    const total = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
-    contador.textContent = total;
-  }
 
   botonesComprar.forEach((boton) => {
     boton.addEventListener("click", (e) => {
+      const usuarioLogueado = sessionStorage.getItem("usuario");
+
+      if (!usuarioLogueado) {
+        Swal.fire({
+          icon: "warning",
+          title: "Debes iniciar sesión",
+          text: "Por favor inicia sesión para agregar productos al carrito",
+          confirmButtonText: "Ir al login"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "login.html";
+          }
+        });
+        return;
+      }
+
+      // ✅ Obtener datos del producto desde la tarjeta HTML
       const tarjeta = e.target.closest(".producto");
       const nombre = tarjeta.querySelector("p:nth-of-type(1)").textContent;
       const precioTexto = tarjeta.querySelector(".precio").textContent;
@@ -27,9 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       localStorage.setItem("carrito", JSON.stringify(carrito));
-      actualizarContador();
+      actualizarContadorCarrito();
+
+      Swal.fire({
+        icon: "success",
+        title: "Producto agregado",
+        text: `${nombre} fue agregado al carrito.`,
+        timer: 1500,
+        showConfirmButton: false,
+      });
     });
   });
 
-  actualizarContador(); // Al cargar la página
+  actualizarContadorCarrito();
 });
