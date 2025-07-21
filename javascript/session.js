@@ -21,17 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cerrar sesión
   if (btnCerrarSesion) {
     btnCerrarSesion.addEventListener("click", () => {
-      // ❌ Eliminar sesión
+      //  Eliminar sesión
       sessionStorage.removeItem("usuario");
 
-      // ❌ Vaciar carrito
+      //  Vaciar carrito
       localStorage.removeItem("carrito");
 
-      // ❌ (Opcional) Resetear contador visual si lo tienes
+      //   Resetear contador visual si lo tienes
       const contador = document.getElementById("contadorCarrito");
       if (contador) contador.textContent = "0";
 
-      // ✅ Mostrar mensaje y redirigir
+      //  Mostrar mensaje y redirigir
       Swal.fire({
         icon: "info",
         title: "Sesión cerrada",

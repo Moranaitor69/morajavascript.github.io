@@ -179,3 +179,10 @@ h1 {
   display: none; /* Se mostrará solo al comprar */
   z-index: 1;
 }
+
+
+.logo img{
+width: 100px;
+padding-bottom: none;
+
+}

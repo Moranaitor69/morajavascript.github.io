@@ -10,7 +10,7 @@
 
   <body>
     <header class="header">
-      <h1 class="logo">SPECIAL</h1>
+      <h1 class="logo"><img src="imagenes/Logo png especial.png" alt=""></h1>
 
       <div class="usuario-container">
         <span id="nombreUsuario"></span>
@@ -28,7 +28,6 @@
     <h2>Tu carrito de compras</h2>
     <div class="carrito" id="carrito"></div>
 
-    <!-- BOTÓN FINALIZAR COMPRA -->
     <div style="text-align: center; margin-top: 20px;">
       <button id="btnFinalizarCompra" class="btn-finalizar">
         🛍 Finalizar Compra
@@ -42,13 +41,13 @@
     <!-- SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Tu JS -->
+    
     <script src="javascript/agregado.js"></script>
     <script src="javascript/session.js"></script>
     <script type="module" src="javascript/agregado.js"></script>
 
 
-    <!-- Contador del carrito -->
+    
     <script type="module">
       import { actualizarContadorCarrito } from './javascript/utils.js';
       actualizarContadorCarrito();

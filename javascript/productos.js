@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // ✅ Obtener datos del producto desde la tarjeta HTML
+      //  Obtener datos del producto desde la tarjeta HTML
       const tarjeta = e.target.closest(".producto");
       const nombre = tarjeta.querySelector("p:nth-of-type(1)").textContent;
       const precioTexto = tarjeta.querySelector(".precio").textContent;
