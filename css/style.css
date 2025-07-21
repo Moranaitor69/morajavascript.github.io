@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+/* NUEVO: agrupamos login + carrito */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #ff4b2b;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #16a34a;
+}
+
+/* Ícono del carrito */
+.icono-carrito {
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  position: relative;
+  text-decoration: none; /* por si es enlace */
+}
+
+.icono-carrito:hover {
+  background-color: #fee2e2;
+}
+
+/* Contador dentro del carrito */
+.contador {
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* Tarjetas de producto */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px;
+}
+
+.producto {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.producto p {
+  margin: 8px 0;
+}
+
+.producto .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b91c1c;
+}
+
+.producto button {
+  margin-top: 10px;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.usuario-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+#cerrarSesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.contenedor-comprar {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.contador-producto {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px 7px;
+  display: none; /* Se mostrará solo al comprar */
+  z-index: 1;
+}
+
+.logo img{
+width: 100px;
+padding-bottom: none;
+
+}
